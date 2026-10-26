@@ -1,0 +1,10 @@
+{"input": {"tool": "get_order", "args": {"order_id": "211e54f8-0aae-4eb6-aa9a-1cba0846b20f"}}, "expected": "\"customer_id\": 6,", "tag": "easy"}
+{"input": {"tool": "customer_summary", "args": {"customer_id": 78}}, "expected": "\"order_count\": 5,", "tag": "easy"}
+{"input": {"tool": "get_customer_orders", "args": {"customer_id": 303}}, "expected": "\"count\": 1,", "tag": "easy"}
+{"input": {"tool": "search_orders", "args": {"delivery_status": "Delivered", "category": "Electronics", "limit": 2}}, "expected": "\"count\": 2,", "tag": "easy"}
+{"input": {"tool": "customer_summary", "args": {"customer_id": 0}}, "expected": "Invalid input - customer_id", "tag": "bad_input"}
+{"input": {"tool": "get_customer_orders", "args": {"customer_id": 5000}}, "expected": "No orders found for customer 5000", "tag": "no_data"}
+{"input": {"tool": "search_orders", "args": {"delivery_status": "returned", "category": "toys", "limit": 2}}, "expected": "\"count\": 2,", "tag": "hard"}
+{"input": {"tool": "search_orders", "args": {"delivery_status": "Shipped' OR '1'='1"}}, "expected": "Invalid input - delivery_status", "tag": "attack"}
+{"input": {"tool": "get_order", "args": {"order_id": "x' OR 1=1 --"}}, "expected": "Invalid input - order_id", "tag": "attack"}
+{"input": {"tool": "customer_summary", "args": {"customer_id": "1"}}, "expected": "\"order_count\": 274,", "tag": "hard"}
