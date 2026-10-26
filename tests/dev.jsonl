@@ -1,0 +1,7 @@
+{"input": {"tool": "get_order", "args": {"order_id": "b8ec9f86-5919-4b71-a5f7-945e7c0a3db0"}}, "expected": "Books", "tag": "easy"}
+
+{"input": {"tool": "customer_summary", "args": {"customer_id": 1}}, "expected": "142600.0", "tag": "easy"}
+{"input": {"tool": "customer_summary", "args": {"customer_id": 97}}, "expected": "\"order_count\": 3,", "tag": "easy"}
+{"input": {"tool": "get_customer_orders", "args": {"customer_id": 150}}, "expected": "\"count\": 3,", "tag": "easy"}
+{"input": {"tool": "search_orders", "args": {"delivery_status": "Pending", "category": "Toys", "limit": 3}}, "expected": "\"count\": 3,", "tag": "easy"}
+{"input": {"tool": "get_order", "args": {"order_id": "8db4068d-d3f4-46f1-a95f-3919a33da159"}}, "expected": "Returned", "tag": "easy"}
